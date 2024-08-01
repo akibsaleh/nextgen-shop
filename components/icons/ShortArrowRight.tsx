@@ -1,43 +1,63 @@
+'use client';
 import { cn } from '@/lib/utils';
+import React from 'react';
 
 const ShortArrowRight = ({ hover }: { hover?: boolean }) => {
+  const pathRef = React.useRef<SVGPathElement>(null);
+  React.useEffect(() => {
+    if (pathRef.current) {
+      if (hover) {
+        pathRef.current.setAttribute(
+          'from',
+          'M1.16663 6.99996H12.8333M12.8333 6.99996L6.99996 1.16663M12.8333 6.99996L6.99996 12.8333',
+        );
+        pathRef.current.setAttribute(
+          'to',
+          'M4 7.00008H21.8334M21.8334 7.00008L16.0001 1.16675M21.8334 7.00008L16.0001 12.8334M21.8334 7.00008H1',
+        );
+      } else {
+        pathRef.current.setAttribute(
+          'from',
+          'M1.16663 6.99996H12.8333M12.8333 6.99996L6.99996 1.16663M12.8333 6.99996L6.99996 12.8333',
+        );
+        pathRef.current.setAttribute(
+          'to',
+          'M1.16663 6.99996H12.8333M12.8333 6.99996L6.99996 1.16663M12.8333 6.99996L6.99996 12.8333',
+        );
+      }
+    }
+  }, [hover]);
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
+      width={hover ? 23 : 14}
       className={cn(
-        'duration-300 max-w-[57px]',
-        hover ? 'w-[57px]' : 'w-[37px]',
+        'max-w-[23px] duration-300 overflow-visible',
+        hover ? 'w-[23px] ' : 'w-[14px]',
       )}
-      height='20'
+      height={14}
       fill='none'
+      viewBox={`0 0 ${hover ? 23 : 14} 14`}
     >
       <path
-        className='group-hover:stroke-accent duration-300 delay-50'
-        stroke='#fff'
+        className='stroke-white group-hover:stroke-accent'
+        stroke=''
+        strokeWidth={2}
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='2'
-        d='M4.167 10h11.666m0 0L10 4.167M15.833 10L10 15.833'
+        d={
+          hover
+            ? 'M4 7.00008H21.8334M21.8334 7.00008L16.0001 1.16675M21.8334 7.00008L16.0001 12.8334M21.8334 7.00008H1'
+            : 'M1.16663 6.99996H12.8333M12.8333 6.99996L6.99996 1.16663M12.8333 6.99996L6.99996 12.8333'
+        }
       >
-        {hover ? (
-          <animate
-            attributeName='d'
-            from='M4.167 10h11.666m0 0L10 4.167M15.833 10L10 15.833'
-            to='M4.167 10h17.666m0 0L10 4.167M15.833 10L10 15.833'
-            dur='0.3s'
-            begin={hover ? 0 : 'indefinite'}
-            fill='freeze'
-          />
-        ) : (
-          <animate
-            attributeName='d'
-            from='M4.167 10h17.666m0 0L10 4.167M15.833 10L10 15.833'
-            to='M4.167 10h11.666m0 0L10 4.167M15.833 10L10 15.833'
-            dur='0.3s'
-            end={hover ? 'indefinite' : 0}
-            fill='freeze'
-          />
-        )}
+        <animate
+          ref={pathRef}
+          attributeName='d'
+          dur='0.3s'
+          begin={hover ? '0.6s' : 'indefinite'}
+          fill='freeze'
+        />
       </path>
     </svg>
   );

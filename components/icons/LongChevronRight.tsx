@@ -4,12 +4,14 @@ const LongChevronRight = ({ hover }: { hover?: boolean }) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
+      width={hover ? 57 : 37}
       className={cn(
         'duration-300 max-w-[57px]',
         hover ? 'w-[57px]' : 'w-[37px]',
       )}
       height='18'
       fill='none'
+      viewBox={`0 0 auto 18`}
     >
       <path
         className='group-hover:stroke-accent-foreground duration-300 delay-50'
