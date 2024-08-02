@@ -25,6 +25,8 @@ const buttonVariants = cva(
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
         link: 'text-primary hover:text-accent text-base font-semibold justify-start w-fit group',
+        circle:
+          'rounded-full bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground text-center',
       },
       size: {
         default: 'h-10 py-2 px-4',
@@ -33,6 +35,7 @@ const buttonVariants = cva(
         icon: 'h-10 w-10',
         menuItem: 'h-[54px] py-1 px-4',
         subMenuItem: 'py-3.5 px-4 w-full h-auto min-h-10',
+        circle: 'w-[169px] h-[169px]',
       },
     },
     defaultVariants: {

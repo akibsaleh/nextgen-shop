@@ -4,6 +4,9 @@ import Cta from '@/components/Cta';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import InfoCta from '@/components/InfoCta';
+import Showcase from '@/components/Showcase';
+import Branches from '../components/Branches';
+import NoticeBoard from '../components/NoticeBoard';
 
 export default function Home() {
   return (
@@ -31,6 +34,9 @@ export default function Home() {
         link={'/random-again'}
         rounded={true}
       />
+      <Showcase />
+      <Branches />
+      <NoticeBoard />
     </main>
   );
 }
