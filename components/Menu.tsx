@@ -1,5 +1,5 @@
 'use client';
-import MenuItem from './ui/MenuItem';
+import MenuItem from '@/components/ui/MenuItem';
 
 type MenuItem = {
   id: string;
@@ -47,12 +47,130 @@ const primaryMenu: MenuItem = [
       { id: '3d', link: '/sub-section-13', label: 'Sub Section 13' },
     ],
   },
-  { id: '4', link: '/2-sub-divs', label: 'Sub divs' },
-  { id: '5', link: '/section-4', label: 'Section 4' },
-  { id: '6', link: '/two-liner-1', label: 'Two Liner 1' },
-  { id: '7', link: '/two-liner-2', label: 'Two Liner 2' },
-  { id: '8', link: '/section-5', label: 'Section 5' },
-  { id: '9', link: '/two-liner-3', label: 'Two Liner 3' },
+  {
+    id: '4',
+    link: '/2-sub-divs',
+    label: 'Sub divs',
+    submenu: [
+      {
+        id: '4a',
+        link: '/sub-section-14',
+        label: 'Sub Section 14',
+        nestedSubmenu: [
+          {
+            id: '4aa',
+            link: '/nested-sub-section-1',
+            label: 'Sub section under 1',
+          },
+          {
+            id: '4ab',
+            link: '/nested-sub-section-2',
+            label: 'Sub section under 2',
+          },
+          {
+            id: '4ac',
+            link: '/nested-sub-section-3',
+            label: 'Sub section under 3',
+          },
+          {
+            id: '4ad',
+            link: '/nested-sub-section-4',
+            label: 'Sub section under 4',
+          },
+          {
+            id: '4ae',
+            link: '/nested-sub-section-5',
+            label: 'Sub section under 5',
+          },
+        ],
+      },
+      {
+        id: '4b',
+        link: '/sub-section-15',
+        label: 'Sub Section 15',
+        nestedSubmenu: [
+          {
+            id: '4ba',
+            link: '/nested-sub-section-6',
+            label: 'Sub section under 6 wider',
+          },
+          {
+            id: '4bb',
+            link: '/nested-sub-section-7',
+            label: 'Sub section under 7 wider',
+          },
+          {
+            id: '4bc',
+            link: '/nested-sub-section-8',
+            label: 'Sub section under 8 wider',
+          },
+          {
+            id: '4bd',
+            link: '/nested-sub-section-9',
+            label: 'Sub section under 9 wider',
+          },
+          {
+            id: '4ae',
+            link: '/nested-sub-section-10',
+            label: 'Sub section under 10 wider',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: '5',
+    link: '/section-4',
+    label: 'Section 4',
+    submenu: [
+      { id: '5a', link: '/sub-section-10', label: 'Sub Section' },
+      { id: '5b', link: '/sub-section-11', label: 'Sub Section' },
+      { id: '5c', link: '/sub-section-12', label: 'Sub Section' },
+      { id: '5d', link: '/sub-section-13', label: 'Sub Section' },
+    ],
+  },
+  {
+    id: '6',
+    link: '/two-liner-1',
+    label: 'Two Liner 1',
+    submenu: [
+      { id: '6a', link: '/sub-section-10', label: 'Sub Section' },
+      { id: '6b', link: '/sub-section-11', label: 'Sub Section' },
+      { id: '6c', link: '/sub-section-12', label: 'Sub Section' },
+      { id: '6d', link: '/sub-section-13', label: 'Sub Section' },
+    ],
+  },
+  {
+    id: '7',
+    link: '/two-liner-2',
+    label: 'Two Liner 2',
+    submenu: [
+      { id: '7a', link: '/sub-section-10', label: 'Sub Section' },
+      { id: '7b', link: '/sub-section-11', label: 'Sub Section' },
+      { id: '7c', link: '/sub-section-12', label: 'Sub Section' },
+      { id: '7d', link: '/sub-section-13', label: 'Sub Section' },
+    ],
+  },
+  {
+    id: '8',
+    link: '/section-5',
+    label: 'Section 5',
+    submenu: [
+      { id: '8a', link: '/sub-section-10', label: 'Sub Section' },
+      { id: '8b', link: '/sub-section-11', label: 'Sub Section' },
+      { id: '8c', link: '/sub-section-12', label: 'Sub Section' },
+      { id: '8d', link: '/sub-section-13', label: 'Sub Section' },
+    ],
+  },
+  {
+    id: '9',
+    link: '/two-liner-3',
+    label: 'Two Liner 3',
+    submenu: [
+      { id: '9a', link: '/sub-section-10', label: 'Sub Section Right Aligned' },
+      { id: '9b', link: '/sub-section-11', label: 'Sub Section' },
+    ],
+  },
 ];
 
 const Menu = () => {

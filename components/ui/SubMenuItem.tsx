@@ -1,8 +1,8 @@
 'use client';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React from 'react';
-import { cn } from '../../lib/utils';
-import { Button } from './button';
 
 const SubMenuItem = ({
   link,
@@ -31,13 +31,18 @@ const SubMenuItem = ({
         {nestedSubMenu && nestedSubMenu?.length > 0 && (
           <div
             className={cn(
-              'w-fit min-w-36 absolute top-[55px] left-1/2 -translate-x-1/2 pt-3.5 border-b-4 border-accent z-50',
+              'w-fit absolute top-0 -left-0 translate-x-[140px] pl-3.5 z-50',
               open ? 'block' : 'hidden',
             )}
           >
-            <nav className='w-full bg-white h-full relative flex flex-col p-2 before:content-[""] before:block  before:border-l-transparent before:border-l-[8px] before:border-r-transparent before:border-r-[8px] before:border-b-white before:border-b-[14px] before:absolute before:-top-3.5 before:left-1/2 before:-translate-x-1/2'>
+            <nav className='w-full bg-white border-b-4 border-accent h-full relative flex flex-col p-2 before:content-[""] before:block  before:border-b-transparent before:border-b-[9px] before:border-t-transparent before:border-t-[9px] before:border-r-white before:border-r-[16px] before:absolute before:top-3.5 before:-left-1.5 before:-translate-x-1/2'>
               {nestedSubMenu.map((item) => (
-                <Button key={item.id} asChild>
+                <Button
+                  variant='subMenuItem'
+                  size='subMenuItem'
+                  key={item.id}
+                  asChild
+                >
                   <Link href={item.link}>{item.label}</Link>
                 </Button>
               ))}
