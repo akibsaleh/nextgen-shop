@@ -5,7 +5,10 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import InfoCta from '@/components/InfoCta';
 import Showcase from '@/components/Showcase';
+import Blog from '../components/Blog';
 import Branches from '../components/Branches';
+import Footer from '../components/Footer';
+import MasonryBlock from '../components/MasonryBlock';
 import NoticeBoard from '../components/NoticeBoard';
 
 export default function Home() {
@@ -37,6 +40,9 @@ export default function Home() {
       <Showcase />
       <Branches />
       <NoticeBoard />
+      <Blog />
+      <MasonryBlock />
+      <Footer />
     </main>
   );
 }
