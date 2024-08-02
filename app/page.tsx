@@ -1,15 +1,14 @@
-'use client';
 import About from '@/components/About';
+import Blog from '@/components/Blog';
+import Branches from '@/components/Branches';
 import Cta from '@/components/Cta';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import InfoCta from '@/components/InfoCta';
+import MasonryBlock from '@/components/MasonryBlock';
+import NoticeBoard from '@/components/NoticeBoard';
 import Showcase from '@/components/Showcase';
-import Blog from '../components/Blog';
-import Branches from '../components/Branches';
-import Footer from '../components/Footer';
-import MasonryBlock from '../components/MasonryBlock';
-import NoticeBoard from '../components/NoticeBoard';
 
 export default function Home() {
   return (

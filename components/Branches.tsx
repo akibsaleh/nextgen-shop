@@ -1,7 +1,7 @@
+import OneLiner from '@/components/OneLiner';
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import OneLiner from './OneLiner';
-import { Button } from './ui/button';
 
 const Branches = () => {
   return (

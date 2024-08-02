@@ -1,6 +1,6 @@
+import { Button } from '@/components/ui/button';
+import WideCard from '@/components/ui/WideCard';
 import OneLiner from './OneLiner';
-import { Button } from './ui/button';
-import WideCard from './ui/WideCard';
 
 const Showcase = () => {
   return (

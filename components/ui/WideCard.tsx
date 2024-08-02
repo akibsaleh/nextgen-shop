@@ -1,7 +1,7 @@
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import { cn } from '../../lib/utils';
-import { Button } from './button';
 
 const WideCard = ({
   icon,

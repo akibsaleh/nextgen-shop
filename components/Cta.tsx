@@ -1,9 +1,9 @@
 'use client';
 import ShortArrowRight from '@/components/icons/ShortArrowRight';
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import React from 'react';
-import { cn } from '../lib/utils';
 
 const Cta = ({
   title,

@@ -1,6 +1,6 @@
+import OneLiner from '@/components/OneLiner';
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import OneLiner from './OneLiner';
-import { Button } from './ui/button';
 
 const gallery = [
   { link: '#', caption: 'Caption but a really long three liners caption' },
